@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&display=swap');
+
 html {
     font-size: 16px;
+}
+
+:root {
+    --main: #252c35;
+    --cyan: #0E8784;
+    --pale-orange: #FDD6BA;
+    --header: Fraunces, serif;
+    --body: Barlow, serif;
 }
 
 *,
@@ -23,10 +33,62 @@ textarea {
     cursor: pointer;
 }
 
+.pages {
+    padding: 0 50px;
+}
+
+input {
+    color: white;
+    background: var(--cyan);
+    padding: 12px 28px;
+    border-radius: 4px;
+    margin-top: 56px;
+    font-family: var(--header);
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2.12rem;
+    font-family: var(--header);
+    font-weight: 900;
+    line-height: 3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+}
+
+h3 {
+    width: 250px;
+    font-size: 2rem;
+    font-family: var(--header);
+    font-weight: 900;
+    line-height: 2.25rem;
+    margin: 38px 0 30px 0;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: var(--header);
+    font-weight: 900;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1.12rem;
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0.01em;
+}
+
 /* Nav Styles */
 header {
     color: white;
-    background: rgb(26, 42, 32);
+    /* background: rgb(26, 42, 32); */
+    background: var(--main);
     height: 9vh;
 }
 
@@ -39,8 +101,17 @@ nav {
     padding: 0 30px;
 }
 
+.nav-logo {
+    width: 200px;
+    height: 26px;
+}
+
 .nav-links {
     display: flex;
+    font-family: var(--header);
+    font-size: 1.12rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .nav-item {
@@ -48,11 +119,195 @@ nav {
     padding: 0 10px;
 }
 
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Hero Styles */
 .hero {
     color: white;
-    background: rgb(26, 42, 32);
+    background: var(--main);
     height: 68vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 50%;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-family: var(--header);
+    font-weight: 900;
+    line-height: 4.5rem;
+    width: 80%;
+    margin-bottom: 32px;
+    letter-spacing: 0.03em;
+}
+
+.right {
+    width: 60%;
+    position: relative;
+    top: 122px;
+    right: 20px;
+    overflow-x: hidden;
+}
+
+.right img {
+    width: 1200px;
+    position: relative;
+    right: 150px;
+    filter: drop-shadow(0 0 1.2rem #1b2026);
+}
+
+/* Discount Banner */
+.discount {
+    height: 23vh;
+    display: flex;
+    align-items: center;
+}
+
+.discount span {
+    font-size: 1.5rem;
+    font-family: var(--header);
+    font-weight: 700;
+}
+.discount p {
+    padding: 25px 280px 25px 15px;
+    border: 7px solid #252c35;
+}
+
+/* Collection Styles */
+#collection {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+#collection .coffee-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 32px;
+}
+
+.coffee-container .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.coffee-container img {
+    width: 235px;
+    height: 173px;
+    margin-bottom: 35px;
+}
+
+.container h4 {
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us Styles */
+#why {
+    height: 85vh;
+    color: white;
+    background: var(--main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top {
+    width: 50%;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.bottom .container {
+    display: flex;
+    margin: 0 15px;
+}
+
+.bottom .box {
+    background: var(--cyan);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 15px;
+    border-radius: 6px;
+}
+
+.bottom img {
+    width: 50px;
+    height: 50px;
+    margin: 70px 0 30px 0;
+}
+
+.bottom .truck {
+    width: 65px;
+}
+
+.box p {
+    width: 255px;
+}
+
+/* How It Works */
+#process {
+    height: 100vh;
+    margin: 200px 0 40px 0;
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+}
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 10px 25px;
+}
+
+.process-container .box {
+    width: 285px;
+    margin-right: 95px;
+}
+
+.process-container span {
+    color: var(--pale-orange);
+    font-size: 4.5rem;
+    font-family: var(--header);
+    font-weight: 900;
+}
+
+#process input {
+    margin-left: 110px;
+}
+
+/* Footer Styles */
+footer {
+    background: var(--main);
+    padding: 40px 85px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .nav {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
 }
